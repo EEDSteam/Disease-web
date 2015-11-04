@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Material design lite -->
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Bootstrap -->
+    <!-- 最新編譯和最佳化的 CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> -->
+    <!-- 選擇性佈景主題 -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"> -->
+    <!-- 最新編譯和最佳化的 JavaScript -->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>-->
+    <!--字型-->
+    <!-- <link rel="stylesheet" id="material-gaze-fonts-css" href="//fonts.googleapis.com/css?family=Roboto%3A400%2C300%2C300italic%2C400italic%2C500%2C700%7CRoboto+Condensed%3A400%2C300%2C700&amp;ver=4.3" type="text/css" media="all"> -->
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- materialize  css framework-->
+    <!-- Compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css"> -->
+    <!-- Compiled and minified JavaScript -->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>-->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <script src="assets/js/index.js"></script>
+</head>
+
+<body>
+    <header>
+        <button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon">
+            <i class="material-icons">menu</i>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
+            <!-- <li class="mdl-menu__item">Some Action</li>
+				<li class="mdl-menu__item">Another Action</li>
+				<li disabled class="mdl-menu__item">Disabled Action</li>
+				<li class="mdl-menu__item">Yet Another Action</li> -->
+
+
+                <!-- 倒水列表  -->
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">Home</a>
+                    <div class="nav-container">
+                        <div class="glass"></div>
+                        <div class="water" id="water"></div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">News</a>
+                    <div class="nav-container">
+                        <div class="glass"></div>
+                        <div class="water" id="water"></div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Map</a>
+                    <div class="nav-container">
+                        <div class="glass"></div>
+                        <div class="water" id="water"></div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">About us</a>
+                    <div class="nav-container">
+                        <div class="glass"></div>
+                        <div class="water" id="water"></div>
+                    </div>
+                </li>
+            </ul>
+        </ul>
+        <h1 class="logo">流行病資訊網</h1>
+        <!-- 疾病種類列表 -->
+        <div class="parent2">
+            <div class="test1 test">
+                <i></i>
+                <div class="tmask"><!-- <i class="material-icons">accessibility</i> --> <p>常見<br>疾病</p></div>
+            </div>
+            <div class="test2 test">
+                <i></i>
+                <div class="testbutton test2_1"><p>蟲媒</p></div>
+                <div class="testbutton test2_2"><p>飲食</p></div>
+                <div class="testbutton test2_3"><p>空氣</p></div>
+                <div class="testbutton test2_4"><p>血液</p></div>
+                <div class="testbutton test2_5"><p>接觸</p></div>
+                <div class="tmask"><!-- <i class="material-icons">repeat_one</i> --><p>傳播<br>方式</p></div>
+            </div>
+            <div class="test3 test">
+                <i></i>
+                <div class="testbutton test3_1"><p>一類</p></div>
+                <div class="testbutton test3_2"><p>二類</p></div>
+                <div class="testbutton test3_3"><p>三類</p></div>
+                <div class="testbutton test3_4"><p>四類</p></div>
+                <div class="testbutton test3_5"><p>五類</p></div>
+                <div class="testbutton test3_6"><p>其他</p></div>
+                <div class="tmask3"><!-- <i class="fa fa-random"></i> --><p>法定<br>分類</p></div>
+            </div>
+            <div class="mask2"><!-- <i class="fa fa-home fa-3x"></i> --><p>疾病<br>列表</p></div>
+        </div>
+    </header>
+    <div class="container">
+        <section class="cr-container">
+            <label style=" margin-left:0%" class="cr-li-slide"></label>
+            <input id="select-img-1" name="radio-set-1" type="radio" class="cr-selector-img-1" checked/>
+            <label for="select-img-1" class="slidebutton cr-label-img-1 textactive">
+                <i class="material-icons">assignment</i>
+                <span class="slidetext">傳播報告</span>
+            </label>
+            <input id="select-img-2" name="radio-set-1" type="radio" class="cr-selector-img-2" />
+            <label style=" margin-left:20%" for="select-img-2" class="slidebutton cr-label-img-2">
+                <i class="fa fa-random"></i>
+                <span class="slidetext">傳染途徑</span>
+            </label>
+            <input id="select-img-3" name="radio-set-1" type="radio" class=" cr-selector-img-3" />
+            <label style=" margin-left:40%" for="select-img-3" class="slidebutton cr-label-img-3">
+                <i class="material-icons">colorize</i>
+                <span class="slidetext">預防措施</span>
+            </label>
+            <input id="select-img-4" name="radio-set-1" type="radio" class=" cr-selector-img-4" />
+            <label style=" margin-left:60%" for="select-img-4" class="slidebutton cr-label-img-4">
+                <i class="fa fa-heart"></i>
+                <span class="slidetext">疾病病況</span>
+            </label>
+            <input id="select-img-5" name="radio-set-1" type="radio" class="cr-selector-img-5" />
+            <label style=" margin-left:80%" for="select-img-5" class="slidebutton cr-label-img-5">
+                <i class="material-icons">local_hospital</i>
+                <span class="slidetext">感染措施</span>
+            </label>
+            <div class="cr-bgimg">
+                <div>
+                    <span>Slice 1 - Image 1</span>
+                    <span>Slice 1 - Image 2</span>
+                    <span>Slice 1 - Image 3</span>
+                    <span>Slice 1 - Image 4</span>
+                    <span>Slice 1 - Image 5</span>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
