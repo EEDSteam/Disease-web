@@ -9,96 +9,114 @@ $(document).ready(function() {
 
 
     //----------------------------------------------- header-water---------------------------------------------
-    var $first = true;
-    $(".nav>li").click(function() {
-        var $beClicked = $(this).children('.container');
-        $(this).children('a').css({
-            'border-bottom': '2px dotted #A0522D'
+    $(function() {
+    $('#demo-menu-lower-left').click(function(){
+        $('#overlay').fadeIn(200,function(){
+            $('#box').animate({'top':'100px'},200);
         });
-        if ($(".active-nav>#water").hasClass('water-circle')) {
-            $(this).children('a').css({
-                'border-bottom': '2px dotted #A0522D'
-            });
-            $('.active-nav>.water-circle')
-                .animate({
-                        'bottom': '25px'
-                    },
-                    function() {
-                        back($beClicked);
-                        pour($beClicked);
-
-                    });
-        }
-        if ($first == true) {
-            $($beClicked).addClass('active-nav');
-            pour($beClicked);
-            $first = false;
-        }
-
+        return false;
     });
-
-    function pour($beClicked) {
-        $('.active-nav').animate({
-            borderSpacing: 180
-        }, {
-            step: function(now, fx) {
-                $($beClicked).css('-webkit-transform', 'rotate(' + now + 'deg)');
-                $($beClicked).css('-moz-transform', 'rotate(' + now + 'deg)');
-                $($beClicked).css('transform', 'rotate(' + now + 'deg)');
-                $('.active-nav>.water').addClass('water-circle').removeClass('water')
-                    .delay(300)
-                    .animate({
-                        'bottom': '150px'
-                    });
-
-            },
-            duration: '1000'
-        }, 'linear');
-    }
-
-    function back($beClicked) {
-        $('.active-nav').delay(300).animate({
-            borderSpacing: 0
-        }, {
-            step: function(now, fx) {
-
-                $('.active-nav').css('-webkit-transform', 'rotate(' + now + 'deg)');
-                $('.active-nav').css('-moz-transform', 'rotate(' + now + 'deg)');
-                $('.active-nav').css('transform', 'rotate(' + now + 'deg)');
-                $('.active-nav>.water-circle').addClass('water').removeClass('water-circle');
-
-            },
-            complete: function() {
-                $('div.active-nav').siblings('a').css({
-                    'border-bottom': ''
-                });
-                $('div.active-nav').removeClass("active-nav");
-                $($beClicked).addClass('active-nav');
-
-
-            },
-            duration: '1000'
-        }, 'linear');
-    }
-    $('.nav>li').each(function() {
-        var $len = $(this).children('a').text().length;
-        var $dist = 80 - ($len / 2) / 2 * 10;
-        $(this).children('a').css({
-            'margin-left': $dist + 'px'
+    $('#boxclose').click(function(){
+        $('#box').animate({'top':'-800px'},500,function(){
+            $('#overlay').fadeOut('fast');
         });
     });
+ 
+	});
+	var $first = true;
+	$(".nav>li").click(function () {
+		var $beClicked = $(this).children('.nav-container');
+		$(this).children('a').css({
+			'border-bottom': '2px dotted #A0522D'
+		});
+		if ($(".active-nav>#water").hasClass('water-circle')) {
+			$(this).children('a').css({
+				'border-bottom': '2px dotted #A0522D'
+			});
+			$('.active-nav>.water-circle')
+				.animate({
+				'bottom': '25px'
+			},
 
-    if ($('.nav>li>.container').hasClass('active-nav') == false) {
-        $(this).hover(function() {
-            $(this).siblings('a').css({
-                'border-bottom': '2px dotted #A0522D'
-            });
-        }, function() {
-            $(this).siblings('a').css({
-                'border-bottom': 'none'
-            });
-        });
-    }
+			function () {
+				back($beClicked);
+				pour($beClicked);
+
+			});
+		}
+		
+
+	});
+	if ($first == true) {
+		$('.active-nav').siblings('a').css({
+			'border-bottom': '2px dotted #A0522D'
+		});
+		$beClicked=$('.active-nav');
+		pour($beClicked);
+		$first = false;
+	}
+	function pour($beClicked) {
+		$('.active-nav').animate({
+			borderSpacing: 180
+		}, {
+			step: function (now, fx) {
+				$($beClicked).css('-webkit-transform', 'rotate(' + now + 'deg)');
+				$($beClicked).css('-moz-transform', 'rotate(' + now + 'deg)');
+				$($beClicked).css('transform', 'rotate(' + now + 'deg)');
+				$('.active-nav>.water').addClass('water-circle').removeClass('water')
+					.delay(300)
+					.animate({
+					'bottom': '150px'
+				});
+
+			},
+			duration: '1000'
+		}, 'linear');
+	}
+
+	function back($beClicked) {
+		$('.active-nav').delay(300).animate({
+			borderSpacing: 0
+		}, {
+			step: function (now, fx) {
+
+				$('.active-nav').css('-webkit-transform', 'rotate(' + now + 'deg)');
+				$('.active-nav').css('-moz-transform', 'rotate(' + now + 'deg)');
+				$('.active-nav').css('transform', 'rotate(' + now + 'deg)');
+				$('.active-nav>.water-circle').addClass('water').removeClass('water-circle');
+
+			},
+			complete: function () {
+				$('div.active-nav').siblings('a').css({
+					'border-bottom': ''
+				});
+				$('div.active-nav').removeClass("active-nav");
+				$($beClicked).addClass('active-nav');
+
+
+			},
+			duration: '1000'
+		}, 'linear');
+	}
+	$('.nav>li').each(function () {
+		var $len = $(this).children('a').text().length;
+		var $dist = 80 - ($len / 2) / 2 * 10;
+		$(this).children('a').css({
+			'margin-left': $dist + 'px'
+		});
+	});
+
+	if ($('.nav>li>.nav-container').hasClass('active-nav') == false) {
+		$(this).hover(function () {
+			$(this).siblings('a').css({
+				'border-bottom': '2px dotted #A0522D'
+			});
+		}, function () {
+			$(this).siblings('a').css({
+				'border-bottom': 'none'
+			});
+		});
+	}
 
 
     //----------------------------------------------Type--------------------------------------------------

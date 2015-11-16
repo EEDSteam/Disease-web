@@ -35,7 +35,10 @@
         <button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon">
             <i class="material-icons">menu</i>
         </button>
-        <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
+		<div class="overlay" id="overlay" style="display:none;"></div>
+		<div class="box" id="box">
+			<a class="boxclose" id="boxclose"></a>
+    <!--    <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left"> -->
             <!-- <li class="mdl-menu__item">Some Action</li>
 				<li class="mdl-menu__item">Another Action</li>
 				<li disabled class="mdl-menu__item">Disabled Action</li>
@@ -43,10 +46,12 @@
 
 
                 <!-- 倒水列表  -->
+			
+			
             <ul class="nav navbar-nav">
                 <li>
                     <a href="#">Home</a>
-                    <div class="nav-container">
+                    <div class="nav-container active-nav">
                         <div class="glass"></div>
                         <div class="water" id="water"></div>
                     </div>
@@ -73,7 +78,8 @@
                     </div>
                 </li>
             </ul>
-        </ul>
+		</div>
+    <!--</ul> -->
         <h1 class="logo">流行病資訊網</h1>
         <!-- 疾病種類列表 -->
         <div class="parent2">
