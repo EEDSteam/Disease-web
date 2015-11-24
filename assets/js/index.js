@@ -132,7 +132,7 @@ $(document).ready(function() {
         var act2 = false;
         var act3 = false;
         if (active1 == 0)
-            $('.parent2').find('.test1').css({
+            $('.circle_manu').find('.test1').css({
                 'background-color': 'gray',
                 'transform': 'translate(0px,125px)'
             });
@@ -190,7 +190,7 @@ $(document).ready(function() {
             }); //下面第二層
 
         if (active1 == 1) {
-            $('.parent2').find('.test1').css({
+            $('.circle_manu').find('.test1').css({
                 'background-color': 'dimGray',
                 'transform': 'none'
             });
@@ -205,16 +205,16 @@ $(document).ready(function() {
         }
 
         if (active2 == 0)
-            $('.parent2').find('.test2').css({
+            $('.circle_manu').find('.test2').css({
                 'background-color': 'gray',
-                'transform': 'translate(-80px,80px)'
+                'transform': 'translate(0px,250px)'
             });
 
         $('.test2').on('mousedown touchstart', function() {
             if (!act2) {
                 $(this).find('.test2_1').css({
                     'background-color': 'gray',
-                    'transform': 'translate(25px,120px)'
+                    'transform': 'translate(-75px,-100px)'
                 });
                 $('.test3').find(".testbutton").css({
                     'transform': 'none'
@@ -228,7 +228,7 @@ $(document).ready(function() {
             if (!act2)
                 $(this).find('.test2_2').css({
                     'background-color': 'gray',
-                    'transform': 'translate(-20px,95px)'
+                    'transform': 'translate(-115px,-55px)'
                 });
             else
                 $(this).find('.test2_2').css({
@@ -238,7 +238,7 @@ $(document).ready(function() {
             if (!act2)
                 $(this).find('.test2_3').css({
                     'background-color': 'gray',
-                    'transform': 'translate(-65px,65px)'
+                    'transform': 'translate(-125px,0px)'
                 });
             else
                 $(this).find('.test2_3').css({
@@ -248,7 +248,7 @@ $(document).ready(function() {
             if (!act2)
                 $(this).find('.test2_4').css({
                     'background-color': 'gray',
-                    'transform': 'translate(-95px,20px)'
+                    'transform': 'translate(-115px,55px)'
                 });
             else
                 $(this).find('.test2_4').css({
@@ -258,7 +258,7 @@ $(document).ready(function() {
             if (!act2)
                 $(this).find('.test2_5').css({
                     'background-color': 'gray',
-                    'transform': 'translate(-120px,-25px)'
+                    'transform': 'translate(-75px,100px)'
                 });
             else
                 $(this).find('.test2_5').css({
@@ -268,20 +268,20 @@ $(document).ready(function() {
             act2 = !act2;
         }); //中間第二層
         if (active2 == 1)
-            $('.parent2').find('.test2').css({
+            $('.circle_manu').find('.test2').css({
                 'background-color': 'darkGray',
                 'transform': 'none'
             });
         if (active3 == 0)
-            $('.parent2').find('.test3').css({
+            $('.circle_manu').find('.test3').css({
                 'background-color': 'gray',
-                'transform': 'translate(-125px,0px)'
+                'transform': 'translate(0px,375px)'
             });
         $('.test3').on('mousedown touchstart', function() {
             if (!act3) {
                 $(this).find('.test3_1').css({
                     'background-color': 'gray',
-                    'transform': 'translate(25px,125px)'
+                    'transform': 'translate(-75px,-100px)'
                 });
                 $('.test2').find(".testbutton").css({
                     'transform': 'none'
@@ -295,7 +295,7 @@ $(document).ready(function() {
             if (!act3)
                 $(this).find('.test3_2').css({
                     'background-color': 'gray',
-                    'transform': 'translate(-20px,100px)'
+                    'transform': 'translate(-115px,-55px)'
                 });
             else
                 $(this).find('.test3_2').css({
@@ -305,7 +305,7 @@ $(document).ready(function() {
             if (!act3)
                 $(this).find('.test3_3').css({
                     'background-color': 'gray',
-                    'transform': 'translate(-65px,65px)'
+                    'transform': 'translate(-125px,0px)'
                 });
             else
                 $(this).find('.test3_3').css({
@@ -315,7 +315,7 @@ $(document).ready(function() {
             if (!act3)
                 $(this).find('.test3_4').css({
                     'background-color': 'gray',
-                    'transform': 'translate(-95px,20px)'
+                    'transform': 'translate(-115px,55px)'
                 });
             else
                 $(this).find('.test3_4').css({
@@ -325,7 +325,7 @@ $(document).ready(function() {
             if (!act3)
                 $(this).find('.test3_5').css({
                     'background-color': 'gray',
-                    'transform': 'translate(-120px,-25px)'
+                    'transform': 'translate(-75px,100px)'
                 });
             else
                 $(this).find('.test3_5').css({
@@ -345,7 +345,7 @@ $(document).ready(function() {
             act3 = !act3;
         }); //上方第二層
         if (active3 == 1)
-            $('.parent2').find('.test3').css({
+            $('.circle_manu').find('.test3').css({
                 'background-color': 'silver',
                 'transform': 'none'
             });

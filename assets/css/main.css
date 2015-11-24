@@ -194,14 +194,14 @@ a.boxclose{
 
 
 /*--------------------------------------------------疾病種類列表----------------------------------------*/
-.parent2 p{
+.circle_manu p{
 	font-family:"微軟正黑體";
 	margin-top:5px;
     font-size: 16px;
 }
 
 
-.parent2 {
+.circle_manu {
     top: 15px;
     right: 15px;
     position: fixed;
@@ -216,7 +216,7 @@ a.boxclose{
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);*/
 }
 
-.test {
+.circle_manu_parameter {
     width: 55%;
     height: 55%;
     background-color: transparent;
@@ -237,11 +237,11 @@ a.boxclose{
 }
 
 .test2 {
-    transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .2s;
+    transition: all 750ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .2s;
 }
 
 .test3 {
-    transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .4s;
+    transition: all 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .4s;
 }
 .testbutton {
     width: 70%;
