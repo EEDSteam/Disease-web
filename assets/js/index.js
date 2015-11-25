@@ -187,7 +187,7 @@ $(document).ready(function() {
                         'transform': 'none'
                     });
                 act1 = !act1;
-            }); //下面第二層
+            }); //第一個
 
         if (active1 == 1) {
             $('.circle_manu').find('.test1').css({
@@ -213,7 +213,7 @@ $(document).ready(function() {
         $('.test2').on('mousedown touchstart', function() {
             if (!act2) {
                 $(this).find('.test2_1').css({
-                    'background-color': 'gray',
+                  
                     'transform': 'translate(-75px,-100px)'
                 });
                 $('.test3').find(".testbutton").css({
@@ -222,47 +222,40 @@ $(document).ready(function() {
                 act3 = !act3;
             } else
                 $(this).find('.test2_1').css({
-                    'background-color': 'darkGray',
+                   
                     'transform': 'none'
                 });
             if (!act2)
                 $(this).find('.test2_2').css({
-                    'background-color': 'gray',
+                   
                     'transform': 'translate(-115px,-55px)'
                 });
             else
                 $(this).find('.test2_2').css({
-                    'background-color': 'darkGray',
                     'transform': 'none'
                 });
             if (!act2)
                 $(this).find('.test2_3').css({
-                    'background-color': 'gray',
                     'transform': 'translate(-125px,0px)'
                 });
             else
                 $(this).find('.test2_3').css({
-                    'background-color': 'darkGray',
                     'transform': 'none'
                 });
             if (!act2)
                 $(this).find('.test2_4').css({
-                    'background-color': 'gray',
                     'transform': 'translate(-115px,55px)'
                 });
             else
                 $(this).find('.test2_4').css({
-                    'background-color': 'darkGray',
                     'transform': 'none'
                 });
             if (!act2)
                 $(this).find('.test2_5').css({
-                    'background-color': 'gray',
                     'transform': 'translate(-75px,100px)'
                 });
             else
                 $(this).find('.test2_5').css({
-                    'background-color': 'darkGray',
                     'transform': 'none'
                 });
             act2 = !act2;
@@ -280,7 +273,6 @@ $(document).ready(function() {
         $('.test3').on('mousedown touchstart', function() {
             if (!act3) {
                 $(this).find('.test3_1').css({
-                    'background-color': 'gray',
                     'transform': 'translate(-75px,-100px)'
                 });
                 $('.test2').find(".testbutton").css({
@@ -289,57 +281,46 @@ $(document).ready(function() {
                 act2 = !act2;
             } else
                 $(this).find('.test3_1').css({
-                    'background-color': 'darkGray',
                     'transform': 'none'
                 });
             if (!act3)
                 $(this).find('.test3_2').css({
-                    'background-color': 'gray',
                     'transform': 'translate(-115px,-55px)'
                 });
             else
                 $(this).find('.test3_2').css({
-                    'background-color': 'darkGray',
                     'transform': 'none'
                 });
             if (!act3)
                 $(this).find('.test3_3').css({
-                    'background-color': 'gray',
                     'transform': 'translate(-125px,0px)'
                 });
             else
                 $(this).find('.test3_3').css({
-                    'background-color': 'darkGray',
                     'transform': 'none'
                 });
             if (!act3)
                 $(this).find('.test3_4').css({
-                    'background-color': 'gray',
                     'transform': 'translate(-115px,55px)'
                 });
             else
                 $(this).find('.test3_4').css({
-                    'background-color': 'darkGray',
                     'transform': 'none'
                 });
             if (!act3)
                 $(this).find('.test3_5').css({
-                    'background-color': 'gray',
                     'transform': 'translate(-75px,100px)'
                 });
             else
                 $(this).find('.test3_5').css({
-                    'background-color': 'darkGray',
                     'transform': 'none'
                 });
             if (!act3)
                 $(this).find('.test3_6').css({
-                    'background-color': 'gray',
                     'transform': 'translate(-180px,-25px)'
                 });
             else
                 $(this).find('.test3_6').css({
-                    'background-color': 'darkGray',
                     'transform': 'none'
                 });
             act3 = !act3;
