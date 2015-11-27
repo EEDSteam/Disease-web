@@ -350,50 +350,33 @@ a.boxclose{
 }
 
 /*----------------------------------------------疾病名稱列表-------------------------------*/
-/*#dd{
-  width:100px;
-  height:100px;
-  background-color:blue;
-  border-radius:50%;
-  position:absolute;
-  color:white;
-  text-align:center;
-  line-height:100px;
-  top:25px;
-  right:25px;
-  z-index:19;
-  position:absolute;
-    font-size:30px;  cursor: pointer;
-}*/
-#dd1,#dd2,#dd3,#dd4,#dd5,#dd6{
-  width:50px;
-  height:50px;
-  background-color:dimGray;
-  border-radius:50%;
-  position:absolute;
-  color:white;
-  text-align:center;
-  top:10px;
-  right:50px;
-  z-index:19;
-  position:absolute;  cursor: pointer;
-  transition:0.5s;
-}
-#dd1{
-    background-color:red;
-}
+.d_list{
+    background-color: #3498DB;
+	border-bottom: 5px solid #2980B9;
+	  top:10px;
+    cursor: pointer;
+    position: absolute;
+	padding: 10px 20px;
+    margin: 0px 10px 10px 0px;
+	border-radius: 10px;
+	font-size: 13px;
+	color: #FFF;
+      width:110px;
+  height:20px;
+ ! display:none;
 
-#t1,#t2,#t3,#t4,#t5,#t6{
-    width:150px;
-    height:200px;
-    font-size:15px;
-    top:80px;
-    position:absolute; text-align:center; 
 }
-#t1{
-    font-size: 20px;
+.d_list_animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
 }
-
+.d_list:active {
+    background-color: #E74C3C;
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
 /*-------------------------------------------------Container------------------------------------------*/
 
 .cr-container {

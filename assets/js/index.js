@@ -338,36 +338,54 @@ $(document).ready(function() {
 
 
     // name----------------------------------------------------------------------------
-    var d_Id=["疾病1","疾病2","疾病3","疾病4","疾病5","疾病6"];
-/*
-var d_ca_1=["天花,嚴重急性呼吸道症候群,鼠疫,狂犬病,更多",["登革熱","德國麻疹","霍亂","流行性斑疹傷寒","白喉","其他"],["腸病毒感染併發重症","結核病","人類免疫缺乏病毒感染","漢生病","百日咳","其他"],["流感併發重症","肉毒桿菌中毒","庫賈氏病","鉤端螺旋體病","萊姆病","其他"],["新型A型流感","中東呼吸症候群冠狀病毒感染症","黃熱病", "伊波拉病毒感染","拉薩熱","其他"],["棘狀阿米巴","茲卡病毒感染","福氏內格里阿米巴腦膜腦炎","貓抓病","NDM-1腸道菌感染症","更多"]];     
-*/
+   var disease_data=[3];
+disease_data[0]=["第一類法定傳染病","第二類法定傳染病","第三類法定傳染病",
+                 "第四類法定傳染病","第五類法定傳染病","其他傳染病"];
 
-    var d_category_1_1="天花,嚴重急性呼吸道症候群,鼠疫,狂犬病,更多";
-    var d_category_1_2="登革熱,德國麻疹,霍亂,流行性斑疹傷寒,白喉,其他";
-    var d_category_1_3="腸病毒感染併發重症,結核病,人類免疫缺乏病毒感染,漢生病,百日咳,更多";
-    var d_category_1_4="流感併發重症,肉毒桿菌中毒,庫賈氏病,鉤端螺旋體病,萊姆病,更多";
-    var d_category_1_5="新型A型流感,中東呼吸症候群冠狀病毒感染症,黃熱病,伊波拉病毒感染,拉薩熱,更多";
-    var d_category_1_o="棘狀阿米巴,茲卡病毒感染,福氏內格里阿米巴腦膜腦炎,貓抓病,NDM-1腸道菌感染症,更多";
-
-    var d_category_2_1="登革熱,屈公病,瘧疾,日本腦炎,鼠疫,更多";
-    var d_category_2_2="腸病毒感染併發重症,腸道出血性大腸桿菌感染症,傷寒,副傷寒,沙門氏菌感染症,更多";
-    var d_category_2_3="新型A型流感,水痘併發症,結核病,多重抗藥性結核病,流感,更多";
-    var d_category_2_4="人類免疫缺乏病毒感染,梅毒,淋病,急性病毒性Ｂ型肝炎,急性病毒性Ｃ型肝炎,更多";
-    var d_category_2_5="福氏內格里阿米巴腦膜腦炎,狂犬病,炭疽病,類鼻疽,鉤端螺旋體病,更多";
+				 
+//法定疾病
+disease_data[0][0]="天花,嚴重急性呼吸道症候群,鼠疫,狂犬病";
+disease_data[0][1]="登革熱,德國麻疹,霍亂,流行性斑疹傷寒,白喉,流行性腦脊髓膜炎,西尼羅熱,傷寒,副傷寒,小兒麻痺症/急性無力肢體麻痺,桿菌性痢疾,阿米巴性痢疾,瘧疾,麻疹,急性病毒性Ａ型肝炎,腸道出血性大腸桿菌感染症,漢他病毒症候群,多重抗藥性結核病,屈公病,炭疽病";
 
 
-    var d_category_3="登革熱,流感,結核病,B型肝炎,肉毒桿菌中毒,更多";
+disease_data[0][2]="腸病毒感染併發重症,結核病,人類免疫缺乏病毒感染,漢生病,百日咳,新生兒破傷風,破傷風,急性病毒性Ｂ型肝炎,急性病毒性Ｃ型肝炎,急性病毒性Ｄ型肝炎,急性病毒性Ｅ型肝炎,流行性腮腺炎,梅毒,淋病,侵襲性ｂ型嗜血桿菌感染症,退伍軍人病,先天性德國麻疹症候群,日本腦炎";
+
+disease_data[0][3]="流感併發重症,肉毒桿菌中毒,庫賈氏病,鉤端螺旋體病,萊姆病,類鼻疽,地方性斑疹傷寒,Ｑ熱,水痘併發症,恙蟲病,兔熱病,侵襲性肺炎鏈球菌感染症,疱疹B病毒感染症,弓形蟲感染症,布氏桿菌病";
+
+disease_data[0][4]="新型A型流感,中東呼吸症候群冠狀病毒感染症,黃熱病,伊波拉病毒感染,拉薩熱,馬堡病毒出血熱,裂谷熱";
+
+disease_data[0][5]="棘狀阿米巴,茲卡病毒感染,福氏內格里阿米巴腦膜腦炎,貓抓病,NDM-1腸道菌感染症,發熱伴血小板減少綜合症,細菌性腸胃炎,常見腸道寄生蟲病簡介,中華肝吸蟲感染症,旋毛蟲感染症,肺吸蟲感染症,廣東住血線蟲感染症,鸚鵡熱,亨德拉病毒及立百病毒感染症,第二型豬鏈球菌感染症,病毒性腸胃炎,沙門氏菌感染症,疥瘡感染症,頭蝨感染症,李斯特菌症,隱球菌症,RE抗藥性檢測,VISA/VRSA抗藥性檢測,肺囊蟲肺炎,淋巴絲蟲病";
+//傳染疾病
+disease_data[1]=["蟲媒傳染","食物或飲水傳染","空氣或飛沫傳染",
+                 "性接觸或血液傳染","接觸傳染"];
+				 
+disease_data[1][0]="登革熱,日本腦炎,西尼羅熱,萊姆病,裂谷熱,屈公病,鼠疫,地方性斑疹傷寒,黃熱病,發熱伴血小板減少綜合症,瘧疾,恙蟲病,流行性斑疹傷寒,茲卡病毒感染,淋巴絲蟲病";
+
+disease_data[1][1]="腸病毒感染併發重症,副傷寒,阿米巴性痢疾,庫賈氏病,急性病毒性Ａ型肝炎,弓形蟲感染症,第二型豬鏈球菌感染症,旋毛蟲感染症,人芽囊原蟲感染,腸道出血性大腸桿菌感染症,沙門氏菌感染症,霍亂,病毒性腸胃炎,急性病毒性Ｅ型肝炎,李斯特菌症,常見腸道寄生蟲病簡介,肺吸蟲感染症,傷寒,桿菌性痢疾,肉毒桿菌中毒,細菌性腸胃炎,小兒麻痺症/急性無力肢體麻痺,布氏桿菌病,中華肝吸蟲感染症,廣東住血線蟲感染症";
+
+disease_data[1][2]="新型A型流感,多重抗藥性結核病,嚴重急性呼吸道症候群,先天性德國麻疹症候群,百日咳,流行性腦脊髓膜炎,漢他病毒症候群,Ｑ熱,水痘併發症,流感,麻疹,流行性腮腺炎,侵襲性肺炎鏈球菌感染症,退伍軍人病,肺囊蟲肺炎,鸚鵡熱,結核病,中東呼吸症候群冠狀病毒感染症,德國麻疹,白喉,侵襲性ｂ型嗜血桿菌感染症,天花,隱球菌症";
+
+disease_data[1][3]="人類免疫缺乏病毒感染,急性病毒性Ｂ型肝炎,梅毒,急性病毒性Ｃ型肝炎,淋病,急性病毒性Ｄ型肝炎";
+
+disease_data[1][4]="福氏內格里阿米巴腦膜腦炎,類鼻疽,新生兒破傷風,漢生病,疱疹B病毒感染症,馬堡病毒出血熱,狂犬病,鉤端螺旋體病,疥瘡感染症,貓抓病,亨德拉病毒及立百病毒感染症,伊波拉病毒感染,炭疽病,破傷風,頭蝨感染症,兔熱病,拉薩熱";
+
+//常見疾病
+disease_data[2]=["登革熱","嚴重急性呼吸道症候群","結核病","新型A型流感"];
 
 
+
+var disease_name= new Array(40);
+
+var disease_list_length=disease_name.length;
+var list_show=0;
+var list_index=0;
+var disease_click_index=0;	
+var list_show_index=0;		//用於切換各種疾病種類用
     var d_show=0;
+	
+	
     var d0=$('.dd');
-    var d1=$('#dd1');
-    var d2=$('#dd2');
-    var d3=$('#dd3');
-    var d4=$('#dd4');
-    var d5=$('#dd5');
-    var d6=$('#dd6');
+
     var index=0;
     var r=30,n=5,a=66;
     var act=0; 
@@ -389,105 +407,123 @@ var d_ca_1=["天花,嚴重急性呼吸道症候群,鼠疫,狂犬病,更多",["�
             });
 
         }
-
-        if($(this).data("l")=="1"){
-            if($(this).data("c")=="1")
-                var str=d_category_1_1.split(",");
-            if($(this).data("c")=="2")
-                var str=d_category_1_2.split(",");
-            if($(this).data("c")=="3")
-                var str=d_category_1_3.split(",");
-            if($(this).data("c")=="4")
-                var str=d_category_1_4.split(",");
-            if($(this).data("c")=="5")
-                var str=d_category_1_5.split(",");
-            if($(this).data("c")=="o")
-                var str=d_category_1_o.split(",");
-        }
-        if($(this).data("l")=="2"){
-            if($(this).data("c")=="1")
-                var str=d_category_2_1.split(",");
-            if($(this).data("c")=="2")
-                var str=d_category_2_2.split(",");
-            if($(this).data("c")=="3")
-                var str=d_category_2_3.split(",");
-            if($(this).data("c")=="4")
-                var str=d_category_2_4.split(",");
-            if($(this).data("c")=="5")
-                var str=d_category_2_5.split(",");
-            if($(this).data("c")=="o")
-                var str=d_category_2_o.split(",");
-        }
-        if($(this).data("l")=="3"){
-            var str=d_category_3.split(",");
-        }
-        for(var j=0;j<=5;j++)
-            d_Id[j]=str[j];  
- //   var  test=d_ca_1[$(this).data("c")];
-   // var str=test.split(",");
-//d_Id[0]=d_ca_1[$(this).data("c")];
-//    alert(d_ca_1[$(this).data("c")]);
-//d_Id[1]=str[1]; 
-
-        if(d_show==0){
-     
-            for(var ii=1;ii<=6;ii++){
-                $('#dd'+ii).delay(ii*100).show('100');
-                $('#t'+ii).delay(ii*100).show('100');
-            }
-        d_show=1;
-        }
-        else{        
-            for(var ii=1;ii<=6;ii++){
-                $('#dd'+ii).delay(ii*100).hide('100');
-                $('#t'+ii).delay(ii*100).hide('100');
-            }
-            d_show=0;
-        }
-        showId();
+	if($(this).data("c")==2){		//common disease
+	    for(var i=0;i<4;i++)	//import the data
+    	disease_name[i]=disease_data[2][i];
+		    disease_list_length=4;
+    }	
+	
+		
+	if($(this).data("c")<2){	
+    var str=disease_data[$(this).data("c")][$(this).data("l")-1].split(",");
+    for(var i=0;i<disease_data[$(this).data("c")][$(this).data("l")-1].length;i++)	//import the data
+    	disease_name[i]=str[i];
+		 disease_list_length=str.length;
+    }
+	
+   /// disease_list_length=str.length;
+    if(list_show==0 || (list_show!=0 &&list_show_index!=$(this).data("l"))){
+    	   $('lf_btn').delay(2).hide('10');
+			for(var i=1;i<=4;i++)
+    			$('d_list'+i).delay(2+i*1).hide('10');
+        $('rg_btn').delay(7).hide('10');
+            list_show=0;
+      
+        
+        reset();
+        
+    	$('lf_btn').delay(100).show('50');
+			for(var i=1;i<=4;i++)
+    			$('d_list'+i).delay(100+i*50).show('50');
+        $('rg_btn').delay(350).show('50');
+        show_name(0);
+        list_show=1;
+        list_show_index=$(this).data("l");
+    }
+    else{
+    $('lf_btn').delay(200).hide('100');
+			for(var i=1;i<=4;i++)
+    			$('d_list'+i).delay(200+i*100).hide('100');
+        $('rg_btn').delay(700).hide('100');
+            list_show=0;
+        reset();
+    }
+	
     })
 
-    for(var i=1;i<=6;i++){
-        $('#dd'+i).click(function(){
-            var tmp=d_Id[0];
-            d_Id[0]=d_Id[$(this).data("l")-1];
-            d_Id[$(this).data("l")-1]=tmp;
-            showId();
-            d1.css({
-            'background-color':'red'
-            });
-        });
-        $('#dd'+i).mouseout(function(){
-            // $(this).animate({
-            //     top:'+=15px',
-            //     right:'+=15px',
-            //     height:'-=30px',
-            //     width:'-=30px',
-            // });
-            $(this).css({
-                'line-height':'50px'
-                ,'background-color':'dimGray'
-            });
-    
-        });    
-        $('#dd'+i).mouseover(function(){
-            // $(this).animate({
-            //     top:'-=15px',
-            //     right:'-=15px',
-            //     height:'+=30px',
-            //     width:'+=30px',
-            // });
-            $(this).css({
-                'line-height':'50px'
-                , 'background-color':'red'
-            });
-        })     
-    }
+ $('lf_btn').click(function(){
+    if(list_index>=4)
+    list_index=(list_index-4)%(disease_list_length);
+    reset();
+    show_name(list_index);    
+})
+//換下4個disease list
+$('rg_btn').click(function(){
+    var tmp=list_index;
+    list_index=(list_index+4)%(disease_list_length);
+ 	if(tmp>list_index)
+        list_index=0;
+    reset();
+    show_name(list_index);    
+})
+ 
+ for(var j=1;j<=4;j++){
+$('d_list'+j).click(function(){
+    if($(this).data("l")!=disease_click_index)
+    {	//若click為非放大的則將原本放大的縮小
 
-    function showId(){
-        for(var i=1;i<=6;i++)
-            $('#t'+i).text(d_Id[(i-1)]);
+    $('d_list'+disease_click_index).css({
+'background-color': '#3498DB'
+    }); 
+        disease_click_index=$(this).data("l");
+
+    $(this).css({
+        'background-color': '#E74C3C','border-bottom': '1px solid'
+    });
     }
+})
+
+$('d_list'+j).mouseover(function(){
+    
+    $(this).css({
+        'background-color': '#E74C3C','border-bottom': '1px solid'
+    });
+    
+})
+
+
+$('d_list'+j).mouseout(function(){
+	if($(this).data("l")!=disease_click_index)
+    $(this).css({
+'background-color': '#3498DB'
+    }); 
+
+})
+
+
+}
+ 
+ 
+ 
+ function reset(){
+    disease_click_index=0;
+for(var z=1;z<=4;z++){
+
+    $('d_list'+z).css({
+'background-color': '#3498DB','border-bottom': '5px solid #2980B9'
+    });  
+}
+}
+
+
+function show_name(index){
+     for(var i=1;i<=4;i++){
+      	if((index+i-1)<=(disease_list_length-1) )
+            $('d_list'+i).text(disease_name[index+i-1]);
+        else
+             $('d_list'+i).text("");
+            }
+}
 
 
 
