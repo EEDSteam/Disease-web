@@ -473,20 +473,20 @@ $('d_list'+j).click(function(){
     {	//若click為非放大的則將原本放大的縮小
 
     $('d_list'+disease_click_index).css({
-'background-color': '#3498DB'
+	'background-color': '#3498DB','border-bottom': '5px solid #2980B9'
     }); 
         disease_click_index=$(this).data("l");
 
     $(this).css({
-        'background-color': '#E74C3C','border-bottom': '1px solid'
+        'background-color': '#E74C3C','border-bottom': '1px solid #E74C3C'
     });
     }
 })
 
 $('d_list'+j).mouseover(function(){
-    
+    //放大
     $(this).css({
-        'background-color': '#E74C3C','border-bottom': '1px solid'
+        'background-color': '#E74C3C','border-bottom': '1px solid #E74C3C'
     });
     
 })
@@ -495,7 +495,7 @@ $('d_list'+j).mouseover(function(){
 $('d_list'+j).mouseout(function(){
 	if($(this).data("l")!=disease_click_index)
     $(this).css({
-'background-color': '#3498DB'
+		'background-color': '#3498DB','border-bottom': '5px solid #2980B9'
     }); 
 
 })
