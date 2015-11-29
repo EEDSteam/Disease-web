@@ -126,7 +126,7 @@ $(document).ready(function() {
     var active1 = 0;
     var active2 = 0;
     var active3 = 0;
-    $('.mask2').on('mousedown touchstart', function() {
+    $('.mask2').click( function() {
 
         var act1 = false;
         var act2 = false;
@@ -139,7 +139,7 @@ $(document).ready(function() {
 
             $('.test1').on('mousedown touchstart', function() {
                 if (!act1) {
-                    $(this).find('.test1_1').css({
+                    $(this).find('.3rd_circlemenu1_1').css({
                         'background-color': 'gray',
                         'transform': 'translate(0px,125px)'
                     });
@@ -152,37 +152,37 @@ $(document).ready(function() {
                     });
                     act2 = !act2;
                 } else
-                    $(this).find('.test1_1').css({
+                    $(this).find('.3rd_circlemenu1_1').css({
                         'background-color': 'darkGray',
                         'transform': 'none'
                     });
                 if (!act1)
-                    $(this).find('.test1_2').css({
+                    $(this).find('.3rd_circlemenu1_2').css({
                         'background-color': 'gray',
                         'transform': 'translate(-60px,105px)'
                     });
                 else
-                    $(this).find('.test1_2').css({
+                    $(this).find('.3rd_circlemenu1_2').css({
                         'background-color': 'darkGray',
                         'transform': 'none'
                     });
                 if (!act1)
-                    $(this).find('.test1_3').css({
+                    $(this).find('.3rd_circlemenu1_3').css({
                         'background-color': 'gray',
                         'transform': 'translate(-105px,60px)'
                     });
                 else
-                    $(this).find('.test1_3').css({
+                    $(this).find('.3rd_circlemenu1_3').css({
                         'background-color': 'darkGray',
                         'transform': 'none'
                     });
                 if (!act1)
-                    $(this).find('.test1_4').css({
+                    $(this).find('.3rd_circlemenu1_4').css({
                         'background-color': 'gray',
                         'transform': 'translate(-125px,0px)'
                     });
                 else
-                    $(this).find('.test1_4').css({
+                    $(this).find('.3rd_circlemenu1_4').css({
                         'background-color': 'darkGray',
                         'transform': 'none'
                     });
@@ -212,7 +212,7 @@ $(document).ready(function() {
 
         $('.test2').on('mousedown touchstart', function() {
             if (!act2) {
-                $(this).find('.test2_1').css({
+                $(this).find('.3rd_circlemenu2_1').css({
                   
                     'transform': 'translate(-75px,-100px)'
                 });
@@ -221,41 +221,41 @@ $(document).ready(function() {
                 });
                 act3 = !act3;
             } else
-                $(this).find('.test2_1').css({
+                $(this).find('.3rd_circlemenu2_1').css({
                    
                     'transform': 'none'
                 });
             if (!act2)
-                $(this).find('.test2_2').css({
+                $(this).find('.3rd_circlemenu2_2').css({
                    
                     'transform': 'translate(-115px,-55px)'
                 });
             else
-                $(this).find('.test2_2').css({
+                $(this).find('.3rd_circlemenu2_2').css({
                     'transform': 'none'
                 });
             if (!act2)
-                $(this).find('.test2_3').css({
+                $(this).find('.3rd_circlemenu2_3').css({
                     'transform': 'translate(-125px,0px)'
                 });
             else
-                $(this).find('.test2_3').css({
+                $(this).find('.3rd_circlemenu2_3').css({
                     'transform': 'none'
                 });
             if (!act2)
-                $(this).find('.test2_4').css({
+                $(this).find('.3rd_circlemenu2_4').css({
                     'transform': 'translate(-115px,55px)'
                 });
             else
-                $(this).find('.test2_4').css({
+                $(this).find('.3rd_circlemenu2_4').css({
                     'transform': 'none'
                 });
             if (!act2)
-                $(this).find('.test2_5').css({
+                $(this).find('.3rd_circlemenu2_5').css({
                     'transform': 'translate(-75px,100px)'
                 });
             else
-                $(this).find('.test2_5').css({
+                $(this).find('.3rd_circlemenu2_5').css({
                     'transform': 'none'
                 });
             act2 = !act2;
@@ -272,7 +272,7 @@ $(document).ready(function() {
             });
         $('.test3').on('mousedown touchstart', function() {
             if (!act3) {
-                $(this).find('.test3_1').css({
+                $(this).find('.3rd_circlemenu3_1').css({
                     'transform': 'translate(-75px,-100px)'
                 });
                 $('.test2').find(".testbutton").css({
@@ -280,47 +280,47 @@ $(document).ready(function() {
                 });
                 act2 = !act2;
             } else
-                $(this).find('.test3_1').css({
+                $(this).find('.3rd_circlemenu3_1').css({
                     'transform': 'none'
                 });
             if (!act3)
-                $(this).find('.test3_2').css({
+                $(this).find('.3rd_circlemenu3_2').css({
                     'transform': 'translate(-115px,-55px)'
                 });
             else
-                $(this).find('.test3_2').css({
+                $(this).find('.3rd_circlemenu3_2').css({
                     'transform': 'none'
                 });
             if (!act3)
-                $(this).find('.test3_3').css({
+                $(this).find('.3rd_circlemenu3_3').css({
                     'transform': 'translate(-125px,0px)'
                 });
             else
-                $(this).find('.test3_3').css({
+                $(this).find('.3rd_circlemenu3_3').css({
                     'transform': 'none'
                 });
             if (!act3)
-                $(this).find('.test3_4').css({
+                $(this).find('.3rd_circlemenu3_4').css({
                     'transform': 'translate(-115px,55px)'
                 });
             else
-                $(this).find('.test3_4').css({
+                $(this).find('.3rd_circlemenu3_4').css({
                     'transform': 'none'
                 });
             if (!act3)
-                $(this).find('.test3_5').css({
+                $(this).find('.3rd_circlemenu3_5').css({
                     'transform': 'translate(-75px,100px)'
                 });
             else
-                $(this).find('.test3_5').css({
+                $(this).find('.3rd_circlemenu3_5').css({
                     'transform': 'none'
                 });
             if (!act3)
-                $(this).find('.test3_6').css({
+                $(this).find('.3rd_circlemenu3_6').css({
                     'transform': 'translate(-180px,-25px)'
                 });
             else
-                $(this).find('.test3_6').css({
+                $(this).find('.3rd_circlemenu3_6').css({
                     'transform': 'none'
                 });
             act3 = !act3;
@@ -388,25 +388,24 @@ var list_show_index=0;		//用於切換各種疾病種類用
 
     var index=0;
     var r=30,n=5,a=66;
-    var act=0; 
+ //   var act=0; 
     d0.click(function(){
         var str="";
-        act=!act;
-        if(act==1){
-            $(".testbutton").css({
-                transform: 'none'     
-            });
-            $(".test3").css({
-                transform: 'none'     
-            });
-            $(".test2").css({
-                transform: 'none'     
-            });
-            $(".test1").css({
-                transform: 'none'     
-            });
-
-        }
+      //  act=!act;
+      //  if(act==1){
+      //    $(".testbutton").css({
+      //          transform: 'none'     
+      //      });
+      //      $(".test3").css({
+      //         transform: 'none'     
+      //      });
+      //      $(".test2").css({
+      //          transform: 'none'     
+       //    });
+      //      $(".test1").css({
+      //         transform: 'none'     
+      //     });
+      // }
 	if($(this).data("c")==2){		//common disease
 	    for(var i=0;i<4;i++)	//import the data
     	disease_name[i]=disease_data[2][i];
