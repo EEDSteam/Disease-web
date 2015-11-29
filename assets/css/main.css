@@ -351,8 +351,8 @@ a.boxclose{
 
 /*----------------------------------------------疾病名稱列表-------------------------------*/
 .d_list{
-    background-color: #3498DB;
-	border-bottom: 5px solid #2980B9;
+    background-color: #7B7777;
+	border-bottom: 5px solid #464242;
 	  top:14%;
     cursor: pointer;
     position: absolute;
@@ -373,10 +373,10 @@ a.boxclose{
 	-webkit-transition: all 0.1s;
 }
 .d_list:active {
-    background-color: #E74C3C;
+    background-color: #BD4646;
 	transform: translate(0px,5px);
   -webkit-transform: translate(0px,5px);
-	border-bottom: 1px solid #E74C3C;
+	border-bottom: 5px solid #7D2F2F;
 }
 /*-------------------------------------------------Container------------------------------------------*/
 

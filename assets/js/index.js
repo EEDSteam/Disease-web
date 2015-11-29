@@ -423,6 +423,7 @@ var list_show_index=0;		//用於切換各種疾病種類用
 	
    /// disease_list_length=str.length;
     if(list_show==0 || (list_show!=0 &&list_show_index!=$(this).data("l"))){
+		//將list btn 縮回去
     	   $('lf_btn').delay(2).hide('10');
 			for(var i=1;i<=4;i++)
     			$('d_list'+i).delay(2+i*1).hide('10');
@@ -431,7 +432,7 @@ var list_show_index=0;		//用於切換各種疾病種類用
       
         
         reset();
-        
+        		//將list btn 跳出來
     	$('lf_btn').delay(100).show('50');
 			for(var i=1;i<=4;i++)
     			$('d_list'+i).delay(100+i*50).show('50');
@@ -473,12 +474,12 @@ $('d_list'+j).click(function(){
     {	//若click為非放大的則將原本放大的縮小
 
     $('d_list'+disease_click_index).css({
-	'background-color': '#3498DB','border-bottom': '5px solid #2980B9'
+	'background-color': '#7B7777','border-bottom': '5px solid #464242'
     }); 
         disease_click_index=$(this).data("l");
 
     $(this).css({
-        'background-color': '#E74C3C','border-bottom': '1px solid #E74C3C'
+        'background-color': '#BD4646','border-bottom': '5px solid #7D2F2F'
     });
     }
 })
@@ -486,7 +487,7 @@ $('d_list'+j).click(function(){
 $('d_list'+j).mouseover(function(){
     //放大
     $(this).css({
-        'background-color': '#E74C3C','border-bottom': '1px solid #E74C3C'
+        'background-color': '#BD4646','border-bottom': '5px solid #7D2F2F'
     });
     
 })
@@ -495,7 +496,7 @@ $('d_list'+j).mouseover(function(){
 $('d_list'+j).mouseout(function(){
 	if($(this).data("l")!=disease_click_index)
     $(this).css({
-		'background-color': '#3498DB','border-bottom': '5px solid #2980B9'
+		'background-color': '#7B7777','border-bottom': '5px solid #464242'
     }); 
 
 })
@@ -510,7 +511,7 @@ $('d_list'+j).mouseout(function(){
 for(var z=1;z<=4;z++){
 
     $('d_list'+z).css({
-'background-color': '#3498DB','border-bottom': '5px solid #2980B9'
+'background-color': '#7B7777','border-bottom': '5px solid #464242'
     });  
 }
 }
