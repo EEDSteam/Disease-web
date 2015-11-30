@@ -350,33 +350,125 @@ a.boxclose{
 }
 
 /*----------------------------------------------疾病名稱列表-------------------------------*/
-.d_list{
-    background-color: #7B7777;
-	border-bottom: 5px solid #464242;
-	  top:14%;
-    cursor: pointer;
-    position: absolute;
-	padding: 5px 20px;
-    margin: 0px 10px 10px 0px;
-	border-radius: 10px;
-	font-size: 13px;
-	color: #FFF;
-      width:110px;
-  height:35px;
-  display:none;
-  float: left;
-	text-decoration: none;	
+@media screen and (min-width: 550px) {
+    .d_list {
+        background-color: #7B7777;
+        border-bottom: 5px solid #464242;
+        top: 14%;
+        cursor: pointer;
+        position: absolute;
+        padding: 5px 20px;
+        margin: 0px 10px 10px 0px;
+        border-radius: 10px;
+        font-size: 13px;
+        color: #FFF;
+        width: 110px;
+        height: 35px;
+        display: none;
+        float: left;
+        text-decoration: none;
+    }
+    d_list1 {
+        left: 33%
+    }
+    d_list2 {
+        left: 48%
+    }
+    d_list3 {
+        left: 63%
+    }
+    d_list4 {
+        left: 78%
+    }
+    up_btn {
+        display: none;
+		top:5000px;
+    }
+    dn_btn {
+        display: none;
+				top:5000px;
+    }
+    rg_btn {
+		top:0%;left:89%;
+        !display: true;
+    }
+    lf_btn {
+		top:0%;
+		left:28%;
+		
+        !display: true;
+    }
+    .d_list_animate {
+        transition: all 0.1s;
+        -webkit-transition: all 0.1s;
+    }
+    .d_list:active {
+        background-color: #BD4646;
+        transform: translate(0px, 5px);
+        -webkit-transform: translate(0px, 5px);
+        border-bottom: 5px solid #7D2F2F;
+    }
 }
-.d_list_animate
-{
-	transition: all 0.1s;
-	-webkit-transition: all 0.1s;
-}
-.d_list:active {
-    background-color: #BD4646;
-	transform: translate(0px,5px);
-  -webkit-transform: translate(0px,5px);
-	border-bottom: 5px solid #7D2F2F;
+
+@media screen and (max-width: 550px) {
+    .d_list {
+        background-color: gray;
+        border-bottom: 5px solid #464242;
+        cursor: pointer;
+        position: absolute;
+        padding: 5px 20px;
+        margin: 0px 10px 10px 0px;
+        border-radius: 10px;
+        font-size: 13px;
+        color: #FFF;
+        width: 30%;
+        height: 60%;
+        display: none;
+        float: left;
+        text-decoration: none;
+    }
+    d_list1 {
+        top: 150%;
+        left: 55%
+    }
+    d_list2 {
+        top: 150%;
+        left: 5%
+    }
+    d_list3 {
+        top: 250%;
+        left: 5%
+    }
+    d_list4 {
+        top: 250%;
+        left: 55%
+    }
+    up_btn {
+		top:70%;
+        display: none;
+    }
+    dn_btn {
+		top:290%;
+        display: none;
+    }
+    rg_btn {
+        display: none;
+				top:5000px;
+    }
+    lf_btn {
+        display: none;
+				top:5000px;
+    }
+    .d_list_animate {
+        transition: all 0.1s;
+        -webkit-transition: all 0.1s;
+    }
+    .d_list:active {
+        background-color: #BD4646;
+        transform: translate(0px, 5px);
+        -webkit-transform: translate(0px, 5px);
+        border-bottom: 5px solid #7D2F2F;
+    }
 }
 /*-------------------------------------------------Container------------------------------------------*/
 

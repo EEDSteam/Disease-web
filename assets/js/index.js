@@ -433,9 +433,11 @@ var list_show_index=0;		//用於切換各種疾病種類用
         reset();
         		//將list btn 跳出來
     	$('lf_btn').delay(100).show('50');
+		    	$('up_btn').delay(100).show('50');
 			for(var i=1;i<=4;i++)
     			$('d_list'+i).delay(100+i*50).show('50');
         $('rg_btn').delay(350).show('50');
+		        $('dn_btn').delay(350).show('50');
         show_name(0);
         list_show=1;
         list_show_index=$(this).data("l");
@@ -457,6 +459,12 @@ var list_show_index=0;		//用於切換各種疾病種類用
     reset();
     show_name(list_index);    
 })
+ $('up_btn').click(function(){
+    if(list_index>=4)
+    list_index=(list_index-4)%(disease_list_length);
+    reset();
+    show_name(list_index);    
+})
 //換下4個disease list
 $('rg_btn').click(function(){
     var tmp=list_index;
@@ -466,7 +474,14 @@ $('rg_btn').click(function(){
     reset();
     show_name(list_index);    
 })
- 
+ $('dn_btn').click(function(){
+    var tmp=list_index;
+    list_index=(list_index+4)%(disease_list_length);
+ 	if(tmp>list_index)
+        list_index=0;
+    reset();
+    show_name(list_index);    
+})
  for(var j=1;j<=4;j++){
 $('d_list'+j).click(function(){
     if($(this).data("l")!=disease_click_index)
