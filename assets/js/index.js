@@ -424,14 +424,17 @@ var list_show_index=0;		//用於切換各種疾病種類用
     if(list_show==0 || (list_show!=0 &&list_show_index!=$(this).data("l"))){
 		//將list btn 縮回去
     	   $('lf_btn').delay(2).hide('10');
+		       	   $('up_btn').delay(2).hide('10');
 			for(var i=1;i<=4;i++)
     			$('d_list'+i).delay(2+i*1).hide('10');
         $('rg_btn').delay(7).hide('10');
+		        $('dn_btn').delay(7).hide('10');
             list_show=0;
       
         
         reset();
         		//將list btn 跳出來
+				        $('.mobile_block').delay(50).show('50');
     	$('lf_btn').delay(100).show('50');
 		    	$('up_btn').delay(100).show('50');
 			for(var i=1;i<=4;i++)
@@ -443,10 +446,12 @@ var list_show_index=0;		//用於切換各種疾病種類用
         list_show_index=$(this).data("l");
     }
     else{
+		    $('up_btn').delay(200).hide('100');
     $('lf_btn').delay(200).hide('100');
 			for(var i=1;i<=4;i++)
     			$('d_list'+i).delay(200+i*100).hide('100');
         $('rg_btn').delay(700).hide('100');
+		        $('dn_btn').delay(700).hide('100');
             list_show=0;
         reset();
     }
@@ -484,6 +489,22 @@ $('rg_btn').click(function(){
 })
  for(var j=1;j<=4;j++){
 $('d_list'+j).click(function(){
+	
+	$('lf_btn').delay(2).hide('10');
+		$('up_btn').delay(2).hide('10');
+	  for(var i=1;i<=4;i++)
+		$('d_list'+i).delay(2+i*1).hide('10');
+       $('rg_btn').delay(7).hide('10');
+	          $('dn_btn').delay(7).hide('10');
+        list_show=0;
+      
+        $('.mobile_block').delay(10).hide('10');
+        reset();
+		
+		
+		
+		/*
+	
     if($(this).data("l")!=disease_click_index)
     {	//若click為非放大的則將原本放大的縮小
 
@@ -495,7 +516,7 @@ $('d_list'+j).click(function(){
     $(this).css({
         'background-color': '#BD4646','border-bottom': '5px solid #7D2F2F'
     });
-    }
+    }*/
 })
 
 $('d_list'+j).mouseover(function(){

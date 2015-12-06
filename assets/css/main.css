@@ -354,7 +354,7 @@ a.boxclose{
     .d_list {
         background-color: #7B7777;
         border-bottom: 5px solid #464242;
-        top: 14%;
+        top: 20%;
         cursor: pointer;
         position: absolute;
         padding: 5px 20px;
@@ -362,8 +362,8 @@ a.boxclose{
         border-radius: 10px;
         font-size: 13px;
         color: #FFF;
-        width: 110px;
-        height: 35px;
+        width: 8%;
+        height: 50%;
         display: none;
         float: left;
         text-decoration: none;
@@ -408,6 +408,10 @@ a.boxclose{
         -webkit-transform: translate(0px, 5px);
         border-bottom: 5px solid #7D2F2F;
     }
+	.mobile_block{
+		
+		display:none;
+	}
 }
 
 @media screen and (max-width: 550px) {
@@ -426,6 +430,7 @@ a.boxclose{
         display: none;
         float: left;
         text-decoration: none;
+								z-index:12;
     }
     d_list1 {
         top: 150%;
@@ -446,10 +451,12 @@ a.boxclose{
     up_btn {
 		top:70%;
         display: none;
+						z-index:12;
     }
     dn_btn {
 		top:290%;
         display: none;
+						z-index:12;
     }
     rg_btn {
         display: none;
@@ -469,6 +476,17 @@ a.boxclose{
         -webkit-transform: translate(0px, 5px);
         border-bottom: 5px solid #7D2F2F;
     }
+		.mobile_block{
+				top:100%;
+		        background-color: #E6E3E3;
+				color:transparent;
+				width:100%;
+				height:300%;
+				z-index:10;
+				display:none;
+				position: absolute;
+				
+	}
 }
 /*-------------------------------------------------Container------------------------------------------*/
 
