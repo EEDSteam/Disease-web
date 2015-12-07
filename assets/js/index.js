@@ -373,21 +373,29 @@ disease_data[1][4]="福氏內格里阿米巴腦膜腦炎,類鼻疽,新生兒破�
 disease_data[2]=["登革熱","嚴重急性呼吸道症候群","結核病","新型A型流感"];
 
 
-
+//alan
+//desktop
 var disease_name= new Array(40);
-
 var disease_list_length=disease_name.length;
 var list_show=0;
 var list_index=0;
 var disease_click_index=0;	
 var list_show_index=0;		//用於切換各種疾病種類用
-    var d_show=0;
-	
-	
-    var d0=$('.dd');
+var d_show=0;
 
+//mobile
+var mlist_show=0;
+var mlist_index=0;
+var mdisease_click_index=0;	
+var mlist_show_index=0;		//用於切換各種疾病種類用
+var md_show=0;
+//alan
+	
+	//lee
+    var d0=$('.dd');
     var index=0;
     var r=30,n=5,a=66;
+	//lee
  //   var act=0; 
     d0.click(function(){
         var str="";
@@ -424,9 +432,11 @@ var list_show_index=0;		//用於切換各種疾病種類用
     if(list_show==0 || (list_show!=0 &&list_show_index!=$(this).data("l"))){
 		//將list btn 縮回去
     	   $('lf_btn').delay(2).hide('10');
-		       	   $('up_btn').delay(2).hide('10');
+		    $('up_btn').delay(2).hide('10');
 			for(var i=1;i<=4;i++)
     			$('d_list'+i).delay(2+i*1).hide('10');
+						for(var i=1;i<=8;i++)
+    			$('md_list'+i).delay(2+i*1).hide('10');
         $('rg_btn').delay(7).hide('10');
 		        $('dn_btn').delay(7).hide('10');
             list_show=0;
@@ -439,20 +449,30 @@ var list_show_index=0;		//用於切換各種疾病種類用
 		    	$('up_btn').delay(100).show('50');
 			for(var i=1;i<=4;i++)
     			$('d_list'+i).delay(100+i*50).show('50');
+						for(var i=1;i<=8;i++)
+    			$('md_list'+i).delay(100+i*50).show('50');
         $('rg_btn').delay(350).show('50');
 		        $('dn_btn').delay(350).show('50');
         show_name(0);
         list_show=1;
+
         list_show_index=$(this).data("l");
+		
+		//mobile
+				        mlist_show=1;
+		        mlist_show_index=$(this).data("l");
     }
     else{
 		    $('up_btn').delay(200).hide('100');
     $('lf_btn').delay(200).hide('100');
 			for(var i=1;i<=4;i++)
     			$('d_list'+i).delay(200+i*100).hide('100');
+						for(var i=1;i<=8;i++)
+    			$('md_list'+i).delay(200+i*100).hide('100');
         $('rg_btn').delay(700).hide('100');
 		        $('dn_btn').delay(700).hide('100');
             list_show=0;
+			       mlist_show=1;
         reset();
     }
 	
@@ -464,12 +484,7 @@ var list_show_index=0;		//用於切換各種疾病種類用
     reset();
     show_name(list_index);    
 })
- $('up_btn').click(function(){
-    if(list_index>=4)
-    list_index=(list_index-4)%(disease_list_length);
-    reset();
-    show_name(list_index);    
-})
+
 //換下4個disease list
 $('rg_btn').click(function(){
     var tmp=list_index;
@@ -479,13 +494,21 @@ $('rg_btn').click(function(){
     reset();
     show_name(list_index);    
 })
+
+//mobile
  $('dn_btn').click(function(){
-    var tmp=list_index;
-    list_index=(list_index+4)%(disease_list_length);
- 	if(tmp>list_index)
-        list_index=0;
+    var tmp=mlist_index;
+    mlist_index=(mlist_index+8)%(disease_list_length);
+ 	if(tmp>mlist_index)
+        mlist_index=0;
     reset();
-    show_name(list_index);    
+    show_name(mlist_index);    
+})
+ $('up_btn').click(function(){
+    if(mlist_index>=8)
+    mlist_index=(mlist_index-8)%(disease_list_length);
+    reset();
+    show_name(mlist_index);    
 })
  for(var j=1;j<=4;j++){
 $('d_list'+j).click(function(){
@@ -540,6 +563,39 @@ $('d_list'+j).mouseout(function(){
 }
  
  
+ //mobile
+  for(var j=1;j<=4;j++){
+$('md_list'+j).click(function(){
+	
+
+	 $('up_btn').delay(2).hide('10');
+	  for(var mi=1;mi<=8;mi++)
+		$('md_list'+mi).delay(2+mi*1).hide('10');
+	    $('dn_btn').delay(10).hide('10');
+        mlist_show=0;
+      
+        $('.mobile_block').delay(10).hide('10');
+        reset();
+})
+
+$('md_list'+j).mouseover(function(){
+    //放大
+    $(this).css({
+        'background-color': '#BD4646','border-bottom': '5px solid #7D2F2F'
+    });
+    
+})
+
+
+$('md_list'+j).mouseout(function(){
+	if($(this).data("l")!=disease_click_index)
+    $(this).css({
+		'background-color': '#7B7777','border-bottom': '5px solid #464242'
+    }); 
+
+})
+}
+ 
  
  function reset(){
     disease_click_index=0;
@@ -549,6 +605,16 @@ for(var z=1;z<=4;z++){
 'background-color': '#7B7777','border-bottom': '5px solid #464242'
     });  
 }
+
+//mobile
+    mdisease_click_index=0;
+for(var z=1;z<=8;z++){
+
+    $('md_list'+z).css({
+'background-color': '#7B7777','border-bottom': '5px solid #464242'
+    });  
+}
+
 }
 
 
@@ -559,6 +625,16 @@ function show_name(index){
         else
              $('d_list'+i).text("");
             }
+		
+
+//mobile		
+	     for(var i=1;i<=8;i++){
+      	if((index+i-1)<=(disease_list_length-1) )
+            $('md_list'+i).text(disease_name[index+i-1]);
+        else
+             $('md_list'+i).text("");
+            }		
+			
 }
 
 

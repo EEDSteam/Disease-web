@@ -351,6 +351,12 @@ a.boxclose{
 
 /*----------------------------------------------疾病名稱列表-------------------------------*/
 @media screen and (min-width: 550px) {
+	
+	md_list1,md_list2,md_list3,md_list4,md_list5,md_list6,md_list7,md_list8{
+		position: absolute;
+		left:5000px;
+		display:none;		
+	}
     .d_list {
         background-color: #7B7777;
         border-bottom: 5px solid #464242;
@@ -363,7 +369,7 @@ a.boxclose{
         font-size: 13px;
         color: #FFF;
         width: 8%;
-        height: 50%;
+        height: 30px;
         display: none;
         float: left;
         text-decoration: none;
@@ -415,6 +421,40 @@ a.boxclose{
 }
 
 @media screen and (max-width: 550px) {
+		
+    md_list1 {
+        top: 90px;
+        left: 5%
+    }
+    md_list2 {
+        top: 90px;
+        left: 55%;
+    }
+    md_list3 {
+        top: 150px;
+        left: 5%;
+    }
+    md_list4 {
+        top: 150px;
+        left: 55%;
+    }
+    md_list5{
+        top: 210px;
+        left: 5%;
+    }
+    md_list6 {
+        top: 210px;
+        left: 55%;
+    }
+    md_list7 {
+        top: 270px;
+        left: 5%;
+    }
+    md_list8 {
+        top: 270px;
+        left: 55%;
+    }	
+	
     .d_list {
         background-color: gray;
         border-bottom: 5px solid #464242;
@@ -426,35 +466,27 @@ a.boxclose{
         font-size: 13px;
         color: #FFF;
         width: 30%;
-        height: 60%;
-        display: none;
+        height: 35px;
+        !display: none;
         float: left;
         text-decoration: none;
 								z-index:12;
     }
-    d_list1 {
-        top: 150%;
-        left: 55%
-    }
-    d_list2 {
-        top: 150%;
-        left: 5%
-    }
-    d_list3 {
-        top: 250%;
-        left: 5%
-    }
-    d_list4 {
-        top: 250%;
-        left: 55%
+	
+
+	
+    d_list1 ,d_list2,d_list3,d_list4{
+        top: 7000px;
+        left: 55%;
+		        display: none;
     }
     up_btn {
-		top:70%;
+		top:35px;
         display: none;
 						z-index:12;
     }
     dn_btn {
-		top:290%;
+		top:305px;
         display: none;
 						z-index:12;
     }
@@ -477,13 +509,13 @@ a.boxclose{
         border-bottom: 5px solid #7D2F2F;
     }
 		.mobile_block{
-				top:100%;
+				top:57px;
 		        background-color: #E6E3E3;
 				color:transparent;
 				width:100%;
-				height:300%;
+				height:300px;
 				z-index:10;
-				display:none;
+				!display:none;
 				position: absolute;
 				
 	}
