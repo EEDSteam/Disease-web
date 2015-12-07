@@ -441,6 +441,7 @@ var md_show=0;
 		        $('dn_btn').delay(7).hide('10');
             list_show=0;
       
+        $('.mobile_block').delay(10).hide('10');
         
         reset();
         		//將list btn 跳出來
@@ -471,6 +472,8 @@ var md_show=0;
     			$('md_list'+i).delay(200+i*100).hide('100');
         $('rg_btn').delay(700).hide('100');
 		        $('dn_btn').delay(700).hide('100');
+				
+        $('.mobile_block').delay(10).hide('10');
             list_show=0;
 			       mlist_show=1;
         reset();
@@ -564,7 +567,7 @@ $('d_list'+j).mouseout(function(){
  
  
  //mobile
-  for(var j=1;j<=4;j++){
+  for(var j=1;j<=8;j++){
 $('md_list'+j).click(function(){
 	
 
