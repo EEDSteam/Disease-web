@@ -513,35 +513,43 @@ $('rg_btn').click(function(){
 
 //mobile
 
-var myElement = document.getElementById('mobile_block');
+var ne = MonoEvent,
+	$m_box = ne( '#mobile_block' ),
+	$btn = ne( '#btn' ),
+	log = document.getElementById( 'log' );
 
-// create a simple instance
-// by default, it only adds horizontal recognizers
-var mc = new Hammer(myElement);
 
-// listen to events...
-//up
-mc.on("swipeup", function(ev) {
-	 //myElement.textContent = ev.type +" gesture detected.";
+$m_box.on( 'swipeRight', function(){
+ var tmp=mlist_index;
+	if( (mlist_index+6)<disease_list_length)
+    mlist_index=(mlist_index+6)%(disease_list_length);	//% avoid overflow
+	if(disease_list_length-mlist_index<6)	
+		for(var i=6;i>=(disease_list_length-mlist_index+1);i--)
+    			$('md_list'+i).css({'display': 'none'});					
+    reset();
+    show_name(mlist_index);    
+
+
+});
+
+$m_box.on( 'swipeLeft', function(){
     if(mlist_index>=6)
     mlist_index=(mlist_index-6)%(disease_list_length);
-    reset();
-    show_name(mlist_index);    
-	
+var max=6;
+					    if(disease_list_length-mlist_index<6)
+							max=disease_list_length-mlist_index;
 
-	});
-	//down
-mc.on("swipedown", function(ev) {
-	 //myElement.textContent = ev.type +" gesture detected.";
-    var tmp=mlist_index;
-    mlist_index=(mlist_index+6)%(disease_list_length);
- 	if(tmp>mlist_index)
-        mlist_index=0;
-    reset();
-    show_name(mlist_index);    
-	
+for(var i=1;i<=max;i++)
+    			$('md_list'+i).css({
+	'display': 'inline'
+    });
 
-	});
+		
+    reset();
+    show_name(mlist_index);   
+
+
+});
 
 
  $('dn_btn').click(function(){
@@ -550,13 +558,11 @@ mc.on("swipedown", function(ev) {
     mlist_index=(mlist_index+6)%(disease_list_length);	//% avoid overflow
 	if(disease_list_length-mlist_index<6)	
 		for(var i=6;i>=(disease_list_length-mlist_index+1);i--)
-    			$('md_list'+i).css({'display': 'none'});
-			
-	
-		
+    			$('md_list'+i).css({'display': 'none'});					
     reset();
     show_name(mlist_index);    
 })
+
  $('up_btn').click(function(){
     if(mlist_index>=6)
     mlist_index=(mlist_index-6)%(disease_list_length);
