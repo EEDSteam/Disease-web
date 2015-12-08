@@ -441,11 +441,11 @@ var md_show=0;
 		        $('dn_btn').delay(7).hide('10');
             list_show=0;
       
-        $('.mobile_block').delay(10).hide('10');
+        $('#mobile_block').delay(10).hide('10');
         
         reset();
         		//將list btn 跳出來
-				        $('.mobile_block').delay(50).show('50');
+				        $('#mobile_block').delay(50).show('50');
     	$('lf_btn').delay(100).show('50');
 		    	$('up_btn').delay(100).show('50');
 			for(var i=1;i<=4;i++)
@@ -473,7 +473,7 @@ var md_show=0;
         $('rg_btn').delay(700).hide('100');
 		        $('dn_btn').delay(700).hide('100');
 				
-        $('.mobile_block').delay(10).hide('10');
+        $('#mobile_block').delay(10).hide('10');
             list_show=0;
 			       mlist_show=1;
         reset();
@@ -499,6 +499,37 @@ $('rg_btn').click(function(){
 })
 
 //mobile
+
+var myElement = document.getElementById('mobile_block');
+
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(myElement);
+
+// listen to events...
+//up
+mc.on("panon", function(ev) {
+	// myElement.textContent = ev.type +" gesture detected.";
+    if(mlist_index>=6)
+    mlist_index=(mlist_index-6)%(disease_list_length);
+    reset();
+    show_name(mlist_index);    
+	
+
+	});
+	//down
+mc.on("pandown", function(ev) {
+    var tmp=mlist_index;
+    mlist_index=(mlist_index+6)%(disease_list_length);
+ 	if(tmp>mlist_index)
+        mlist_index=0;
+    reset();
+    show_name(mlist_index);    
+	
+
+	});
+
+
  $('dn_btn').click(function(){
     var tmp=mlist_index;
     mlist_index=(mlist_index+6)%(disease_list_length);
@@ -524,7 +555,7 @@ $('d_list'+j).click(function(){
 	          $('dn_btn').delay(7).hide('10');
         list_show=0;
       
-        $('.mobile_block').delay(10).hide('10');
+        $('#mobile_block').delay(10).hide('10');
         reset();
 		
 		
