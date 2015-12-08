@@ -373,6 +373,9 @@ a.boxclose{
         display: none;
         float: left;
         text-decoration: none;
+										font-family: Microsoft JhengHei;
+								text-align:center;
+								 vertical-align: middle;
     }
     d_list1 {
         left: 33%
@@ -463,6 +466,7 @@ a.boxclose{
 								z-index:12;
 								font-family: Microsoft JhengHei;
 								text-align:center;
+								 vertical-align: middle;
     }
 	
 

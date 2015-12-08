@@ -541,7 +541,7 @@ var max=6;
 
 for(var i=1;i<=max;i++)
     			$('md_list'+i).css({
-	'display': 'inline'
+	'display': 'inline-block;'
     });
 
 		
@@ -697,11 +697,14 @@ function show_name(index){
             
 			if(disease_name[index+i-1].length<5)
 				//alert(disease_name[index+i-1].length);
-				$('d_list'+i).css({'font-size':'22px'});
+				$('d_list'+i).css({'font-size':'22px','line-height': '30px'});
 							else if(disease_name[index+i-1].length<=7 &&disease_name[index+i-1].length>=5)
-								$('md_list'+i).css({'font-size':'16px'});
-			else 
-				$('d_list'+i).css({'font-size':'13px'});
+								$('d_list'+i).css({'font-size':'16px','line-height': '30px'});
+	else if(disease_name[index+i-1].length<=9 &&disease_name[index+i-1].length>7)
+								$('d_list'+i).css({'font-size':'13px','line-height': '30px'});
+	
+	else 
+				$('d_list'+i).css({'font-size':'13px','line-height': '20px'});
 			$('d_list'+i).text(disease_name[index+i-1]);
 			
 			
@@ -715,11 +718,14 @@ function show_name(index){
 	     for(var i=1;i<=6;i++){
       	if((index+i-1)<=(disease_list_length-1) ){
 						if(disease_name[index+i-1].length<5)			
-				$('md_list'+i).css({'font-size':'19px'});
+				$('md_list'+i).css({'font-size':'19px','line-height': '30px'});
 			else if(disease_name[index+i-1].length<=7 &&disease_name[index+i-1].length>=5)
-								$('md_list'+i).css({'font-size':'16px'});
+								$('md_list'+i).css({'font-size':'16px','line-height': '30px'});
+			else if(disease_name[index+i-1].length<=9 &&disease_name[index+i-1].length>7)
+								$('md_list'+i).css({'font-size':'13px','line-height': '30px'});
+	
 			else 
-				$('md_list'+i).css({'font-size':'13px'});		
+				$('md_list'+i).css({'font-size':'13px','line-height': '20px'});		
 			
             $('md_list'+i).text(disease_name[index+i-1]);
 			
