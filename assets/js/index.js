@@ -508,7 +508,7 @@ var mc = new Hammer(myElement);
 
 // listen to events...
 //up
-mc.on("panup", function(ev) {
+mc.on("swipeup", function(ev) {
 	 //myElement.textContent = ev.type +" gesture detected.";
     if(mlist_index>=6)
     mlist_index=(mlist_index-6)%(disease_list_length);
@@ -518,7 +518,7 @@ mc.on("panup", function(ev) {
 
 	});
 	//down
-mc.on("pandown", function(ev) {
+mc.on("swipedown", function(ev) {
 	 //myElement.textContent = ev.type +" gesture detected.";
     var tmp=mlist_index;
     mlist_index=(mlist_index+6)%(disease_list_length);
