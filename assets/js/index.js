@@ -519,7 +519,7 @@ var ne = MonoEvent,
 	log = document.getElementById( 'log' );
 
 
-$m_box.on( 'swipeRight', function(){
+$m_box.on( 'swipeDown', function(){
  var tmp=mlist_index;
 	if( (mlist_index+6)<disease_list_length)
     mlist_index=(mlist_index+6)%(disease_list_length);	//% avoid overflow
@@ -532,7 +532,7 @@ $m_box.on( 'swipeRight', function(){
 
 });
 
-$m_box.on( 'swipeLeft', function(){
+$m_box.on( 'swipeUp', function(){
     if(mlist_index>=6)
     mlist_index=(mlist_index-6)%(disease_list_length);
 var max=6;
