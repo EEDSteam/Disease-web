@@ -415,7 +415,6 @@ a.boxclose{
         border-bottom: 5px solid #7D2F2F;
     }
 	.mobile_block{
-		
 		display:none;
 	}
 }
@@ -506,13 +505,13 @@ a.boxclose{
 		#mobile_block{
 				top:57px;
 		        background-color: #E6E3E3;
-//				color:transparent;
+				color:transparent;
 				width:100%;
-				height:800%;
+				height:1600%;
 				z-index:10;
-		!		display:none;
+				display:none;
 				position: absolute;
-			!	opacity: 0.5;
+				opacity: 0.5;
 				
 	}
 }

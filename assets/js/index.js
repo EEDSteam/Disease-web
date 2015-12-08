@@ -508,8 +508,8 @@ var mc = new Hammer(myElement);
 
 // listen to events...
 //up
-mc.on("panon", function(ev) {
-	// myElement.textContent = ev.type +" gesture detected.";
+mc.on("panup", function(ev) {
+	 //myElement.textContent = ev.type +" gesture detected.";
     if(mlist_index>=6)
     mlist_index=(mlist_index-6)%(disease_list_length);
     reset();
@@ -519,6 +519,7 @@ mc.on("panon", function(ev) {
 	});
 	//down
 mc.on("pandown", function(ev) {
+	 //myElement.textContent = ev.type +" gesture detected.";
     var tmp=mlist_index;
     mlist_index=(mlist_index+6)%(disease_list_length);
  	if(tmp>mlist_index)
