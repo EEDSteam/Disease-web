@@ -450,7 +450,7 @@ var md_show=0;
 		    	$('up_btn').delay(100).show('50');
 			for(var i=1;i<=4;i++)
     			$('d_list'+i).delay(100+i*50).show('50');
-						for(var i=1;i<=12;i++)
+						for(var i=1;i<=6;i++)
     			$('md_list'+i).delay(100+i*50).show('50');
         $('rg_btn').delay(350).show('50');
 		        $('dn_btn').delay(350).show('50');
@@ -468,7 +468,7 @@ var md_show=0;
     $('lf_btn').delay(200).hide('100');
 			for(var i=1;i<=4;i++)
     			$('d_list'+i).delay(200+i*100).hide('100');
-						for(var i=1;i<=12;i++)
+						for(var i=1;i<=6;i++)
     			$('md_list'+i).delay(200+i*100).hide('100');
         $('rg_btn').delay(700).hide('100');
 		        $('dn_btn').delay(700).hide('100');
@@ -501,15 +501,15 @@ $('rg_btn').click(function(){
 //mobile
  $('dn_btn').click(function(){
     var tmp=mlist_index;
-    mlist_index=(mlist_index+12)%(disease_list_length);
+    mlist_index=(mlist_index+6)%(disease_list_length);
  	if(tmp>mlist_index)
         mlist_index=0;
     reset();
     show_name(mlist_index);    
 })
  $('up_btn').click(function(){
-    if(mlist_index>=12)
-    mlist_index=(mlist_index-12)%(disease_list_length);
+    if(mlist_index>=6)
+    mlist_index=(mlist_index-6)%(disease_list_length);
     reset();
     show_name(mlist_index);    
 })
@@ -567,12 +567,12 @@ $('d_list'+j).mouseout(function(){
  
  
  //mobile
-  for(var j=1;j<=12;j++){
+  for(var j=1;j<=6;j++){
 $('md_list'+j).click(function(){
 	
 
 	 $('up_btn').delay(2).hide('10');
-	  for(var mi=1;mi<=12;mi++)
+	  for(var mi=1;mi<=6;mi++)
 		$('md_list'+mi).delay(2+mi*1).hide('10');
 	    $('dn_btn').delay(10).hide('10');
         mlist_show=0;
@@ -611,7 +611,7 @@ for(var z=1;z<=4;z++){
 
 //mobile
     mdisease_click_index=0;
-for(var z=1;z<=12;z++){
+for(var z=1;z<=6;z++){
 
     $('md_list'+z).css({
 'background-color': '#7B7777','border-bottom': '5px solid #464242'
@@ -631,7 +631,7 @@ function show_name(index){
 		
 
 //mobile		
-	     for(var i=1;i<=12;i++){
+	     for(var i=1;i<=6;i++){
       	if((index+i-1)<=(disease_list_length-1) )
             $('md_list'+i).text(disease_name[index+i-1]);
         else
