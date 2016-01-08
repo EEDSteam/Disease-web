@@ -42,12 +42,12 @@ body {
   color: black;
 }
 .search-box:not(:focus) {
-  text-indent: -1000px;
+  text-indent: -2000px;
 }
 
 #search-submit {
   position: relative;
-  left: -1000px;
+  left: -2000px;
 }
 
 .search-icon {
