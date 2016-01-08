@@ -1,0 +1,108 @@
+@charset "UTF-8";
+body {
+  margin: 5%;
+}
+
+
+.search-box {
+  -webkit-transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+  transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+  
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #ebebeb;
+}
+.search-box + label .search-icon {
+  color: black;
+}
+.search-box:hover {
+  color: white;
+  background: #c8c8c8;
+  box-shadow: 0 0 0 5px #3d4752;
+}
+.search-box:hover + label .search-icon {
+  color: white;
+}
+.search-box:focus {
+  -webkit-transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
+  transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding-left: 15px;
+  cursor: text;
+  width: 150px;
+  border-radius: auto;
+  background: #ebebeb;
+  color: black;
+}
+.search-box:focus + label .search-icon {
+  color: black;
+}
+.search-box:not(:focus) {
+  text-indent: -1000px;
+}
+
+#search-submit {
+  position: relative;
+  left: -1000px;
+}
+
+.search-icon {
+  position: relative;
+  left: -30px;
+  color: white;
+  cursor: pointer;
+}
+
+show_scan_result {
+  background-color: yellow;
+  border-bottom: 5px solid #464242;
+  top: 20%;
+  position: absolute;
+  padding: 5px 20px;
+  margin: 0px 10px 10px 0px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #FFF;
+  width: 350px;
+  height: 150px;
+  text-decoration: none;
+  font-family: Microsoft JhengHei;
+  display: none;
+}
+
+scan_result1, scan_result2, scan_result3, scan_result4 {
+  font-family: "微軟正黑體", serif;
+  background-color: yellow;
+  position: absolute;
+  font-size: 17px;
+
+  color: black;
+  width: 40%;
+  height: 40px;
+  text-decoration: none;
+  font-family: Microsoft JhengHei;
+  cursor: pointer;
+}
+
+scan_result1 {
+  top: 10%;
+}
+
+scan_result2 {
+  top: 55%;
+}
+
+scan_result3 {
+  top: 10%;
+  left: 55%;
+}
+
+scan_result4 {
+  top: 55%;
+  left: 55%;
+}

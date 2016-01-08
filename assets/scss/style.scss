@@ -1,0 +1,96 @@
+$tl: 0.6s; // transition length
+
+
+
+
+.search-box {
+  transition: width $tl, border-radius $tl, background $tl, box-shadow $tl;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;border: none;
+  cursor: pointer;
+  background: rgb(235, 235, 235);
+  & + label .search-icon {    color: black    }
+  &:hover {
+    color: white;
+    background: rgb(200, 200, 200);
+    box-shadow: 0 0 0 5px rgb(61, 71, 82);
+    & + label .search-icon {    color: white    }
+  }
+  &:focus {
+    transition: width $tl cubic-bezier(0,1.22,.66,1.39), border-radius $tl, background $tl;
+    border: none;outline: none;
+    box-shadow: none;
+    padding-left: 15px;
+    cursor: text;
+    width: 300px;
+    border-radius: auto;
+    background: rgb(235, 235, 235);
+    color: black;
+    & + label .search-icon {    color: black;    }
+  }
+  &:not(:focus) {    text-indent:-5000px;    } // for more-graceful falling back (:not browsers likely support indent)
+}
+
+#search-submit {
+  position: relative;left: -5000px;
+}
+
+.search-icon {
+  position: relative;
+  left: -30px;
+  color: white;
+  cursor: pointer;
+}
+ show_scan_result {
+        background-color: yellow;
+        border-bottom: 5px solid #464242;
+        top: 20%;
+        position: absolute;
+        padding: 5px 20px;
+        margin: 0px 10px 10px 0px;
+        border-radius: 10px;
+        font-size: 13px;
+        color: #FFF;
+        width: 350px;
+        height: 150px;  
+        text-decoration: none;
+				font-family: Microsoft JhengHei;
+        display:none;
+    }
+    
+scan_result1,scan_result2,scan_result3,scan_result4 {
+  font-family:"微軟正黑體", serif;
+        background-color: yellow;
+        position:absolute;
+        font-size: 17px;
+        color: black;
+        width: 40%;
+        height: 40px;  
+        text-decoration: none;
+				font-family: Microsoft JhengHei;
+        cursor: pointer;
+    }
+  scan_result1{
+ 
+    top:10%;
+  }  
+   scan_result2{
+    top:55%; 
+  }  
+     scan_result3{
+    top:10%; 
+    left:55%;
+  }  
+       scan_result4{
+    top:55%; 
+    left:55%;
+  }  
+  
+  
+  
+
+
+
+
+
